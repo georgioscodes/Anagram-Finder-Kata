@@ -17,3 +17,4 @@ out/
 ### STS ###
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+/AnagramExercise.pdf

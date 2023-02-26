@@ -31,4 +31,7 @@ public final class ThrowIf {
             }
         }
     }
+
+    private ThrowIf() {
+    }
 }
