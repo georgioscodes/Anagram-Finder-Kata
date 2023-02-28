@@ -1,6 +1,6 @@
 package com.global.commtech.test.anagramfinder.core;
 
-import com.global.commtech.test.anagramfinder.validator.ThrowIf;
+import com.global.commtech.test.anagramfinder.validator.ThrowIf.ListContains;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class AnagramFinder {
 
     public Map<Word, LinkedHashSet<Word>> groupAnagrams(final List<String> sameSizedWords) {
-        ThrowIf.ListContain.wordsWithDifferentLength(sameSizedWords);
+        ListContains.wordsWithDifferentLength(sameSizedWords);
         final var listOfWords = Word.fromStrings(sameSizedWords);
         final LinkedHashMap<Word, LinkedHashSet<Word>> grouped = new LinkedHashMap<>();
         for (var currentWord : listOfWords) {

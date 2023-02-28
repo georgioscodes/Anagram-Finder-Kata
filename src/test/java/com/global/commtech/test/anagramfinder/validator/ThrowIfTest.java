@@ -10,11 +10,11 @@ import org.junit.jupiter.api.Test;
 class ThrowIfTest {
 
     @Nested
-    class ListContain {
+    class ListContains {
 
         @Test
         void throwsWhenListContainsWordWithDifferentLength() {
-            assertThatThrownBy(() -> ThrowIf.ListContain.wordsWithDifferentLength(List.of("aa", "aaa")))
+            assertThatThrownBy(() -> ThrowIf.ListContains.wordsWithDifferentLength(List.of("aa", "aaa")))
                 .isInstanceOf(AnagramFinderException.class)
                 .hasMessage("All words in the list must be of the same size for the list: [aa, aaa]");
 
@@ -22,7 +22,7 @@ class ThrowIfTest {
 
         @Test
         void doesNotThrowWhenListIsEmpty() {
-            ThrowIf.ListContain.wordsWithDifferentLength(List.of());
+            ThrowIf.ListContains.wordsWithDifferentLength(List.of());
         }
     }
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 public final class ThrowIf {
 
-    public static final class ListContain {
+    public static final class ListContains {
 
         public static void wordsWithDifferentLength(final List<String> strings) {
             if (strings.isEmpty()) {
